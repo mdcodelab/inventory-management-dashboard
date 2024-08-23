@@ -1,4 +1,3 @@
-import type { Config } from "tailwindcss";
 
 import type { Config } from "tailwindcss";
 import { createThemes } from "tw-colors";

@@ -1,11 +1,12 @@
+import DashboardPage from "@/app/dashboard/page.tsx";
 
-
-function page() {
+function Home() {
   return (
     <div>
-      Hello
+      <DashboardPage></DashboardPage>
+      Hello from HomePage
     </div>
   )
 }
 
-export default page
+export default Home;
