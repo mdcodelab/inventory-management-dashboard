@@ -1,5 +1,5 @@
 
-import Navbar from "./(components)/Navbar"
+import Navbar from "@/app/(components)/navbar/Navbar";
 
 function DashboardWrapper({children} : {children: React.ReactNode}) {
   return (
