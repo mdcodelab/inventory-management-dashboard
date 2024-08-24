@@ -9,7 +9,7 @@ import Link from "next/link";
 
 function Navbar() {
   return (
-    <nav className="flex justify-between items-center w-full mb-7">
+    <nav className="flex justify-between items-center w-full mb-7 bordered border-2 border-black">
       {/* left side*/}
       <div className="flex justify-between items-center gap-5">
         <button className="px-3 py-3 bg-gray-100 rounded-full hover:bg-blue-100" onClick={()=>{}}>
@@ -34,7 +34,8 @@ function Navbar() {
           </div>
           <div className="relative">
             <Bell className="cursor-pointer text-gray-500" size={24}></Bell>
-            <span className="absolute -top-3 -right-2">3</span>
+            <span className="absolute -top-3 -right-2 bg-red-500 w-5 h-5 rounded-full flex 
+            justify-center items-center text-white">3</span>
           </div>
           <hr className="w-0 h-7 border border-solid border-l border-gray-300 mx-3" />
           <div className="flex items-center gap-3 cursor-pointer">
