@@ -6,13 +6,22 @@ import { Moon } from "lucide-react";
 import Image from "next/image";
 import { Settings } from "lucide-react";
 import Link from "next/link";
+import { useAppSelector, useAppDispatch} from "@/app/redux";
+import { setIsSidebarCollapsed } from "@/app/state";
+
 
 function Navbar() {
+  const dispatch=useAppDispatch();
+  const isSidebarCollapsed = useAppSelector((state)=> state.global.isSidebarCollapsed);
+  const toggleSidebar = ()=> {
+    dispatch(setIsSidebarCollapsed(!isSidebarCollapsed));
+  }
+
   return (
-    <nav className="flex justify-between items-center w-full mb-7 bordered border-2 border-black">
+    <nav className="flex justify-between items-center w-full mb-7">
       {/* left side*/}
       <div className="flex justify-between items-center gap-5">
-        <button className="px-3 py-3 bg-gray-100 rounded-full hover:bg-blue-100" onClick={()=>{}}>
+        <button className="px-3 py-3 bg-gray-100 rounded-full hover:bg-blue-100" onClick={()=>toggleSidebar()}>
           <Menu></Menu>
         </button>
         <div className="relative">
