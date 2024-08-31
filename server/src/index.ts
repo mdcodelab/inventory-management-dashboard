@@ -5,11 +5,12 @@ import cors from "cors";
 import helmet from "helmet";
 import bodyParser from "body-parser";
 
-{/* ROUTES IMPORT*/}
+//routes import
+import dashboardRouter from "./routes/dashboardRoutes";
 
-{/* CONFIGURATION*/}
-dotenv.configDotenv();
-const app=express();
+//configuration
+dotenv.config();
+const app = express();
 app.use(express.json());
 app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
@@ -18,10 +19,15 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
-{/* ROUTES*/}
-
-{/* SERVER*/}
-const port = process.env.PORT || 3001;
-app.listen(()=> {
-    console.log(`Port is listening at port ${port}`);
+//routes
+app.get("/", (req, res)=> {
+  res.send("Home page")
 })
+
+app.use("/dashboard", dashboardRouter);
+
+//server
+const port = process.env.PORT || 4000;
+app.listen(port, () => {
+  console.log(`Server is listening at port ${port}`);
+});
