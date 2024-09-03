@@ -36,9 +36,8 @@ const PurchaseSummary = () => {
                     : "0"}
                 </p>
                 {lastDataPoint && (
-                  <p className={`text-sm ${lastDataPoint.changePercentage! >= 0
-                        ? "text-green-500"
-                        : "text-red-500"
+                  <p className={`text-sm ${lastDataPoint.changePercentage! >= 0 
+                    ? "text-green-500" : "text-red-500"
                     } flex ml-3`}
                   >
                     {lastDataPoint.changePercentage! >= 0 ? (
@@ -61,8 +60,7 @@ const PurchaseSummary = () => {
                 <YAxis tickLine={false} tick={false} axisLine={false} />
                 <Tooltip
                   formatter={(value: number) => [
-                    `$${value.toLocaleString("en")}`,
-                  ]}
+                    `$${value.toLocaleString("en")}`,]}
                   labelFormatter={(label) => {
                     const date = new Date(label);
                     return date.toLocaleDateString("en-US", {
