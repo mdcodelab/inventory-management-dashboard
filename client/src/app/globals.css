@@ -25,3 +25,11 @@ html, body, #root, .app {
     grid-template-rows: repeat(8, 7.5vh);
   }
 }
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border: 1px solid lightgrey;
+  margin-top: 8rem;
+}

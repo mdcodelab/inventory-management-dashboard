@@ -57,7 +57,7 @@ function Sidebar() {
       {/* top logo */}
       <div className="flex gap-3 justify-between items-center">
           <div className="logo flex pl-2 items-center justify-center">
-          <img src="/images/logo.png" alt="logo" className="w-6 h-6" />
+          <img src="/images/logo.png" alt="logo" className="w-6 h-6 block ml-1" />
           <h1 className="font-bold text-xl pl-1 md:text-center">EDSTOCK</h1>
           </div>
           <button
