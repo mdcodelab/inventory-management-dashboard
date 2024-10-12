@@ -26,10 +26,3 @@ html, body, #root, .app {
   }
 }
 
-.not-found {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  border: 1px solid lightgrey;
-  margin-top: 8rem;
-}
