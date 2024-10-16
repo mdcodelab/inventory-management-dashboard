@@ -30,7 +30,7 @@ export interface PurchaseSummary {
 }
 
 export interface ExpenseSummary {
-    expenseSummarId: string;
+    expenseSummaryId: string;
     totalExpenses: number;
     date: string;
 }
@@ -59,7 +59,7 @@ export interface User {
 const api = createApi({
     reducerPath: "api", 
     baseQuery: fetchBaseQuery({ baseUrl: process.env.NEXT_PUBLIC_API_URL }),
-    tagTypes: ["DashboardMetrics", "Products", "Users", "Expenses"],
+    tagTypes: ["DashboardElements", "Products", "Users", "Expenses"],
     endpoints: (builder) => ({
         // Endpoint for getting dashboard elements
         getDashboardElements: builder.query<DashboardElements, void>({

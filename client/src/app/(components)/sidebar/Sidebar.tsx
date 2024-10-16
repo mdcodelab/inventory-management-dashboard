@@ -57,11 +57,11 @@ function Sidebar() {
       {/* top logo */}
       <div className="flex gap-3 justify-between items-center">
           <div className="logo flex pl-2 items-center justify-center">
-          <img src="/images/logo.png" alt="logo" className="w-6 h-6 block ml-1" />
+          <img src="/images/logo.png" alt="logo" className="w-6 h-6 block ml-6" />
           <h1 className="font-bold text-xl pl-1 md:text-center">EDSTOCK</h1>
           </div>
           <button
-          className="px-3 py-3 rounded-full bg-gray-100 hover:bg-blue-100"
+          className="px-3 py-3 rounded-full bg-gray-100 hover:bg-blue-100 btn-sidebar"
           onClick={() => toggleSidebar()}>
           <Menu className="w-6 h-6"></Menu>
         </button>

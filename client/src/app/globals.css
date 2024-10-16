@@ -25,4 +25,9 @@ html, body, #root, .app {
     grid-template-rows: repeat(8, 7.5vh);
   }
 }
+@media (min-width: 768px) {
+  .btn-sidebar {
+    display: none;
+  }
+}
 

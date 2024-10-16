@@ -1,7 +1,8 @@
 import { CheckCircle, Package, Tag, TrendingDown, TrendingUp } from "lucide-react";
-import PopularProducts from "./PopularProducts";
-import PurchaseSummary from "./PurchaseSummary";
-import SalesSummary from "./SalesSummary";
+import PopularProducts from "./CardPopularProducts";
+import PurchaseSummary from "./CardPurchaseSummary";
+import SalesSummary from "./CardSalesSummary";
+import CardExpenseSummary from "./CardExpenseSummary";
 
 const Dashboard = () => {
 
@@ -10,6 +11,7 @@ const Dashboard = () => {
       <PopularProducts></PopularProducts>
       <SalesSummary></SalesSummary>
       <PurchaseSummary></PurchaseSummary>
+      <CardExpenseSummary></CardExpenseSummary>
       <div className="row-span-3 bg-gray-500"></div>
       <div className="row-span-3 xl:row-span-2 bg-gray-500"></div>
       <div className="row-span-3 xl:row-span-2 bg-gray-500"></div>
