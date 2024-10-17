@@ -32,8 +32,44 @@ const Dashboard = () => {
         },
       ]}
       ></StatCard>
-      
-      <div className="row-span-3 xl:row-span-2 bg-gray-500"></div>
+
+      <StatCard
+      title="Dues & Pending Orders"
+      primaryIcon={<CheckCircle className="text-blue-600 w-6 h-6"></CheckCircle>}
+      dataRange="22-29 October 2023"
+      details={[
+        {
+          title: "Dues",
+          amount: "250.00",
+          changePercentage: 131,
+          IconComponent: TrendingUp,
+        },
+        {
+          title: "Pending Orders",
+          amount: "147.00",
+          changePercentage: -56,
+          IconComponent: TrendingDown,
+        },
+      ]}></StatCard>
+
+      <StatCard
+      title="Customer Growth"
+      primaryIcon={<Tag className="text-blue-600 w-6 h-6"></Tag>}
+      dataRange="22-29 October 2023"
+      details={[
+        {
+          title: "Sales",
+          amount: "1000.00",
+          changePercentage: 20,
+          IconComponent: TrendingUp,
+        },
+        {
+          title: "Discount",
+          amount: "200.00",
+          changePercentage: -10,
+          IconComponent: TrendingDown,
+        },
+      ]}></StatCard>
     </div>
   );
 };

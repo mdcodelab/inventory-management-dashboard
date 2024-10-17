@@ -40,13 +40,13 @@ return (
             </div>
         
         {/* BODY */}
-        <div className="flex flex-col items-center mb-6 justify-around gap-4 pax-5">
-            <div className="rounded-full p-5 bg-blue-50 border-sky-500 border-[1px] mt-6">{primaryIcon}</div>
+        <div className="flex flex-col items-center mb-6 justify-around gap-4 px-5">
+            <div className="rounded-full p-5 bg-blue-50 border-sky-500 border-[1px] mt-2">{primaryIcon}</div>
             <div className="flex-1">
                 {details.map((detail, index) => {
                     return (
                         <React.Fragment key={index}>
-                            <div className="flex items-center justify-between my-4 w-[220px] border border-black">
+                            <div className="flex items-center justify-between my-4 w-[220px]">
                                 <span className="text-gray-500">{detail.title}</span>
                                 <span className="text-bold text-gray-800">{detail.amount}</span>
                                 <div className="flex items-center">
