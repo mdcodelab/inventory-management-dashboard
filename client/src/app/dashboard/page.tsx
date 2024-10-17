@@ -3,6 +3,7 @@ import PopularProducts from "./CardPopularProducts";
 import PurchaseSummary from "./CardPurchaseSummary";
 import SalesSummary from "./CardSalesSummary";
 import CardExpenseSummary from "./CardExpenseSummary";
+import StatCard from "./StatCard";
 
 const Dashboard = () => {
 
@@ -12,9 +13,26 @@ const Dashboard = () => {
       <SalesSummary></SalesSummary>
       <PurchaseSummary></PurchaseSummary>
       <CardExpenseSummary></CardExpenseSummary>
-      <div className="row-span-3 bg-gray-500"></div>
-      <div className="row-span-3 xl:row-span-2 bg-gray-500"></div>
-      <div className="row-span-3 xl:row-span-2 bg-gray-500"></div>
+      <StatCard 
+      title="Customer & Expenses"
+      primaryIcon={<Package className="text-blue-600 w-6 h-6"></Package>}
+      dataRange="22-29 October 2023"
+      details={[
+        {
+          title: "Customer Growth",
+          amount: "175.00",
+          changePercentage: 131,
+          IconComponent: TrendingUp,
+        },
+        {
+          title: "Expenses",
+          amount: "10.00",
+          changePercentage: -56,
+          IconComponent: TrendingDown,
+        },
+      ]}
+      ></StatCard>
+      
       <div className="row-span-3 xl:row-span-2 bg-gray-500"></div>
     </div>
   );
