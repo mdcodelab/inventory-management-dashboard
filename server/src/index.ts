@@ -7,6 +7,7 @@ import bodyParser from "body-parser";
 
 //routes import
 import dashboardRouter from "./routes/dashboardRoutes";
+import productsRouter from "./routes/productsRoutes";
 
 //configuration
 dotenv.config();
@@ -25,6 +26,7 @@ app.get("/", (req, res)=> {
 })
 
 app.use("/dashboard", dashboardRouter);
+app.use("/products", productsRouter);
 
 //server
 const port = process.env.PORT || 4000;

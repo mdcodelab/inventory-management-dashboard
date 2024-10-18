@@ -3,10 +3,7 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-export const getDashboardElements = async (
-  req: Request,
-  res: Response
-): Promise<void> => {
+export const getDashboardElements = async (req: Request,res: Response): Promise<void> => {
   try {
     const popularProducts = await prisma.products.findMany({
       take: 15,

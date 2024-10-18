@@ -40,7 +40,7 @@ return (
             </div>
         
         {/* BODY */}
-        <div className="flex flex-col items-center mb-6 justify-around gap-4 px-5">
+        <div className="flex flex-col items-center mb-6 justify-around gap-4 px-5 pt-10">
             <div className="rounded-full p-5 bg-blue-50 border-sky-500 border-[1px] mt-2">{primaryIcon}</div>
             <div className="flex-1">
                 {details.map((detail, index) => {
