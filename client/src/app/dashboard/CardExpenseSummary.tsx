@@ -11,11 +11,11 @@ import { useGetDashboardElementsQuery } from "../state/api";
   
   const CardExpenseSummary = () => {
     const { data: dashboardElements, isLoading } = useGetDashboardElementsQuery();
-    console.log("DashboardElements", dashboardElements);
+    //console.log("DashboardElements", dashboardElements);
   
     const expenseSummary = dashboardElements?.expenseSummary[0];
 
-  console.log("Expense summary", expenseSummary );
+  //console.log("Expense summary", expenseSummary );
     const expenseByCategorySummary =
       dashboardElements?.expenseByCategorySummary || [];
   
