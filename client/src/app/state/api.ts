@@ -66,19 +66,30 @@ const api = createApi({
             query: () => ({
                 url: `/dashboard`,
             }),
-            providesTags: ["DashboardElements"],
+            providesTags: ["DashboardElements", "Products"],
         }),
 
         // Example endpoint for getting all products with pagination and keyword
-        getAllProducts: builder.query<Product[], { pageNumber: number; keyword?: string }>({
-            query: ({ pageNumber, keyword }) => ({
+        getAllProducts: builder.query<Product[], string | void>({
+            query: (search) => ({
                 url: `/products`,
-                params: { pageNumber, keyword },
+                params: search ? { search } : {},
             }),
             providesTags: ["Products"],
         }),
+
+        //POST request - mutation
+        createProduct: builder.mutation<Product, NewProduct>({
+            query: (newProduct) => ({
+                url: `/products`,
+                method: "POST",
+                body: newProduct
+            }),
+            invalidatesTags: ["Products"],
+        }),
+
     }),
 });
 
-export const { useGetDashboardElementsQuery, useGetAllProductsQuery } = api;
+export const { useGetDashboardElementsQuery, useGetAllProductsQuery, useCreateProductMutation} = api;
 export default api;
