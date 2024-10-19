@@ -6,13 +6,16 @@ import Header from "../(components)/header/Header";
 import { SearchIcon } from "lucide-react";
 import { PlusCircle } from "lucide-react";
 import Rating from "../(components)/rating/Rating";
+import CreateProductModal from "./CreateProductModal";
+import { useCreateProductMutation } from "../state/api";
+import { setInterval } from "timers";
 
 const ProductsPage = () => {
 const[searchTerm, setSearchTerm]=useState("");
-const [isModelOpen, setIsModalOpen] = useState(false);
+const [isModalOpen, setIsModalOpen] = useState(false);
 
 const {data:products, isLoading, isError} = useGetAllProductsQuery(searchTerm);
-console.log("Products", products);
+//console.log("Products", products);
 
 if(isLoading) {
     return <div className="py-4">Loading...</div>
@@ -20,6 +23,20 @@ if(isLoading) {
 
 if(isError || !products) {
     return <div className="text=center text-red-500">Failed to fetch products.</div>
+}
+
+const[createProduct]=useCreateProductMutation();
+
+type ProductFormData = {
+productId:string,
+name: string,
+price: number,
+rating: number,
+stockQuantity: number
+}
+
+const handleCreateProduct = async (productData:ProductFormData)=> {
+await createProduct(productData);
 }
 
     return (
@@ -63,6 +80,11 @@ if(isError || !products) {
                     })
                 )}
             </div>
+
+            {/* MODAL*/}
+            <CreateProductModal isOpen={isModalOpen} onClose={()=> setIsModalOpen(false)}
+                onCreate={handleCreateProduct}></CreateProductModal>
+
        </div>
     )
 }
