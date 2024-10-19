@@ -5,7 +5,7 @@ import { DataGrid, GridColDef} from "@mui/x-data-grid";
 
 const InventoryPage = () => {
     const {data:products, isLoading, isError}=useGetAllProductsQuery();
-console.log("Products", products);
+//console.log("Products", products);
 
 if(isLoading) {
     return (<div className="py-4">Loading...</div>)
