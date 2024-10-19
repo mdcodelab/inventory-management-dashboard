@@ -42,6 +42,7 @@ export interface ExpenseByCategorySummary {
     date: string;
 }
 
+
 export interface DashboardElements {
     popularProducts: Product[];
     salesSummary: SalesSummary[];
@@ -53,7 +54,7 @@ export interface DashboardElements {
 export interface User {
     userId: string;
     name: string;
-    email: String;
+    email: string;
 }
 
 const api = createApi({
@@ -88,8 +89,16 @@ const api = createApi({
             invalidatesTags: ["Products"],
         }),
 
+        getAllUsers: builder.query<User[], string | void>({
+            query: () => ({
+                url: `/users`,
+            }),
+            providesTags: ["Users"],
+        }),
+
     }),
 });
 
-export const { useGetDashboardElementsQuery, useGetAllProductsQuery, useCreateProductMutation} = api;
+export const { useGetDashboardElementsQuery, useGetAllProductsQuery, useCreateProductMutation, 
+    useGetAllUsersQuery} = api;
 export default api;
