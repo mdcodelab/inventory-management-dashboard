@@ -6,7 +6,7 @@ const prisma = new PrismaClient();
 export const getAllProducts = async (req:Request, res:Response):Promise<void> => {
     try {
         const products = await prisma.products.findMany({})
-        console.log("Products", products);
+        //console.log("Products", products);
         res.status(200).json(products);
     } catch (error) {
         res.status(500).json({message: "There is an error retrieving products"})

@@ -5,7 +5,7 @@ import { DataGrid, GridColDef} from "@mui/x-data-grid";
 
 const UsersPage = ()=> {
 const {data:users, isLoading, isError}=useGetAllUsersQuery();
-console.log("Users", users);
+//console.log("Users", users);
 
 if((isLoading)) {
 return <div className="py-4">Loading</div>
