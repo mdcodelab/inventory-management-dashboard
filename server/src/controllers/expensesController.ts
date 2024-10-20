@@ -19,6 +19,6 @@ try {
     })
     res.status(200).json(expenseByCategorySummary);
 } catch (error) {
-    res.status(500).json({message: "Error retrieving data"})
+    res.status(500).json({message: "Error retrieving expenses by category"})
 }
 }

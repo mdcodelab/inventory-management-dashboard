@@ -14,7 +14,7 @@ const[searchTerm, setSearchTerm]=useState("");
 const [isModalOpen, setIsModalOpen] = useState(false);
 
 const {data:products, isLoading, isError} = useGetAllProductsQuery(searchTerm);
-//console.log("Products", products);
+console.log("Products", products);
 const[createProduct]=useCreateProductMutation();
 
 type ProductFormData = {

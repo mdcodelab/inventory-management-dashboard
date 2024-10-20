@@ -89,16 +89,23 @@ const api = createApi({
             invalidatesTags: ["Products"],
         }),
 
-        getAllUsers: builder.query<User[], string | void>({
+        getAllUsers: builder.query<User[], void>({
             query: () => ({
                 url: `/users`,
             }),
             providesTags: ["Users"],
         }),
 
+        getExpensesByCategory: builder.query<ExpenseByCategorySummary[], void>({
+            query: () => ({
+                url: `/expenses`,
+            }),
+            providesTags: ["Expenses"],
+        }),
+
     }),
 });
 
 export const { useGetDashboardElementsQuery, useGetAllProductsQuery, useCreateProductMutation, 
-    useGetAllUsersQuery} = api;
+    useGetAllUsersQuery, useGetExpensesByCategoryQuery} = api;
 export default api;
