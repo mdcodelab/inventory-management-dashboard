@@ -58,7 +58,7 @@ setUserSettings(copySettings);
                                     </label>
                                 ):(
                                 <input type="text" className="py-2 px-4 border rounded-lg text-gray-500 
-                                focus:outline-none focus:border-blue-500" value={setting.value as string}
+                                focus:outline-none focus:border-blue-500 bg-white shadow-sm shadow-gray-500" value={setting.value as string}
                                  onChange={(e)=>{
                                     const copySettings=[...userSettings];
                                     copySettings[index].value=e.target.value;

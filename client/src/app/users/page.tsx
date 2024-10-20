@@ -31,6 +31,14 @@ const columns:GridColDef[] = [
             getRowId={(row)=> row.userId}
             checkboxSelection
             className="bg-white shadow rounded:lg bordered border-gray-200 mt-5 text-gray-700"
+            sx={{
+                "& .MuiDataGrid-cellCheckbox": {
+                    color: "white", 
+                },
+                "& .MuiDataGrid-row": {
+                    color: "lightgrey", 
+                },
+            }}
             />
             
         </div>

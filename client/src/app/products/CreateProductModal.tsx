@@ -52,22 +52,22 @@ const CreateProductModal = ({isOpen, onClose, onCreate}:CreateProductModalProps)
                     {/* product name*/}
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700">Product Name:</label>
                     <input type="text" name="name" value={formData.name} onChange={handleChange} 
-                    placeholder="Name..." className="w-full p-2 mb-2 border-gray-500 border-2 rounded-md" required></input>
+                    placeholder="Name..." className="w-full p-2 mb-2 border-gray-500 border-2 rounded-md bg-white" required></input>
                     
                     {/* product price*/}
                     <label htmlFor="price" className="block text-sm font-medium text-gray-700">Price:</label>
                     <input type="number" name="price" value={formData.price} onChange={handleChange} 
-                    placeholder="Price..." className="w-full p-2 mb-2 border-gray-500 border-2 rounded-md" required></input>
+                    placeholder="Price..." className="w-full p-2 mb-2 border-gray-500 border-2 rounded-md bg-white" required></input>
                                     
                      {/* rating*/}
                     <label htmlFor="rating" className="block text-sm font-medium text-gray-700">Rating:</label>
                     <input type="number" name="rating" value={formData.rating} onChange={handleChange} 
-                    placeholder="Rating..." className="w-full p-2 mb-2 border-gray-500 border-2 rounded-md" required></input>                
+                    placeholder="Rating..." className="w-full p-2 mb-2 border-gray-500 border-2 rounded-md bg-white" required></input>                
                 
                     {/* stockQuantity*/}
                     <label htmlFor="stockQuantity" className="block text-sm font-medium text-gray-700">Stock Quantity:</label>
                     <input type="number" name="stockQuantity" value={formData.stockQuantity} onChange={handleChange} 
-                    placeholder="Stock quantity..." className="w-full p-2 mb-2 border-gray-500 border-2 rounded-md" required></input> 
+                    placeholder="Stock quantity..." className="w-full p-2 mb-2 border-gray-500 border-2 rounded-md bg-white" required></input> 
 
                     {/* create actions*/}
                     <button type="submit" className="mt-1 bg-blue-500 px-4 py-2 text-white rounded hover:bg-blue-700"

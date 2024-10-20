@@ -22,7 +22,7 @@ const columns:GridColDef[] = [
     { field: "rating", headerName: "Rating", width: 150, type: "number", valueGetter:(value, row)=>row.rating ? row.rating : "N/A" },
     { field: "stockQuantity", headerName: "Stock Quantity", width: 150 }
 ]
-
+    const rowsClass = "text-grey-500";
     return (
         <div className="flex flex-col">
             <Header name="Inventory - All Products"></Header>
@@ -31,7 +31,15 @@ const columns:GridColDef[] = [
             columns={columns}
             getRowId={(row)=> row.productId}
             checkboxSelection
-            className="bg-white shadow rounded:lg bordered border-gray-200 mt-5 text-gray-700"
+            className="bg-white shadow rounded:lg bordered border-gray-200 mt-5 text-red-500"
+            sx={{
+                "& .MuiDataGrid-cellCheckbox": {
+                    color: "rgb(255, 255, 255)",
+                },
+                "& .MuiDataGrid-row": {
+                    color: "lightgrey", 
+                },
+            }}
             />
             
         </div>
