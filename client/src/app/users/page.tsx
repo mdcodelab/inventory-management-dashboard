@@ -36,7 +36,7 @@ const columns:GridColDef[] = [
                     color: "white", 
                 },
                 "& .MuiDataGrid-row": {
-                    color: "lightgrey", 
+                    color: "grey", 
                 },
             }}
             />
