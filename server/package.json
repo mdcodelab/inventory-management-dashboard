@@ -10,10 +10,8 @@
     "prod": "npm run build && node dist/src/index.js",
     "start": "npm run build && node dist/src/index.js",
     "dev": "concurrently \"npx tsc -w\" \"nodemon --exec ts-node src/index.ts\" \"npm --prefix ../client run dev\"",
-
     "client": "npm --prefix ../client run dev",
-    "start-all": "concurrently \"npm start\" \"npm run client\" \"start http://localhost:3000\""
-
+    "start-all": "concurrently \"npm start\" \"npm run client\" \"wait-on http://localhost:3000 && open http://localhost:3000\""
   },
   "keywords": [],
   "author": "",
@@ -36,6 +34,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.5.1",
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "wait-on": "^8.0.1"
   }
 }
